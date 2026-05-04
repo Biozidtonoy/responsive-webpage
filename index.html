@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Webpage</title>
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Subscribe</title>
 </head>
 <body>
-    
+    <header class="header">
+        <div class="leftSideHeader">
+            <div class="logo">
+                <img src="/responsive-webpage/image/logo.png" alt="company logo">
+            </div>
+            <div class="companyName">Subscribe</div>
+        </div>
+
+        <button  class="menu-toggle" aria-label="Toggle menu"><span class="mdi mdi-menu"></span></button>
+
+        <div class="rightSideHeader">
+            <nav class="navbar" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <button class="signInbtn" aria-label="Sign in your account" >Sign In</button>
+            </nav>
+        </div>
+    </header>
+
+    <script src="script.js"></script>
 </body>
 </html>

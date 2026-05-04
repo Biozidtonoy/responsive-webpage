@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+
+  --color-primary: #4f46e5;
+  --color-secondary: #111827;
+  --color-text: #374151;
+  --color-white: #ffffff;
+
+  /* Spacing */
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+
+ 
+  --font-main: 'Inter', sans-serif;
+
+  --radius-md: 8px;
+
+
+  --transition: all 0.5s ease;
+  --transition-btn : all 0.5s ease 
+}
+
+body{
+    font-family: var(--font-main);
+    line-height: 1.5;
+}
+
+.header{
+    height: 80px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    padding: 0 var(--space-lg);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.menu-toggle .mdi {
+    font-size: 28px;
+}
+
+@media (max-width : 768px){
+    .header{
+        height: auto;
+        padding: var(--space-md);
+        gap: 10px;
+    }
+    .navbar{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-links{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .menu-toggle{
+        display: block;
+    }
+    .rightSideHeader{
+        display: none;
+    }
+
+    .rightSideHeader.active{
+        display: flex;
+        justify-content: center;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+}
+
+.logo img{
+    height: 40px;
+    width: auto;
+}
+
+.companyName{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.leftSideHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.navbar{
+    display: flex;  
+    align-items: center;
+    gap: 20px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+@media (max-width: 768px){
+    
+}
+
+.signInbtn{
+    font-size: 1rem;
+    font-weight: 600;
+    max-height: 40px;
+    padding: var(--space-sm) var(--space-md);
+    margin: auto;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.signInbtn:hover{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(93, 21, 187, 0.8) ;
+    transform: scale(1.05);
+}
+
+.nav-links a{
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-white);
+    text-decoration: underline;
+}
