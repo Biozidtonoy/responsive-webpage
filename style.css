@@ -28,6 +28,12 @@
   --transition-btn : all 0.5s ease 
 }
 
+@font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    src: url('/fonts/Roboto_Condensed-ExtraBold.ttf');
+}
+
 body{
     font-family: var(--font-main);
     line-height: 1.5;
@@ -40,8 +46,8 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* flex-wrap: wrap; */
     padding: 0 var(--space-lg);
+    box-shadow: 0 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .menu-toggle {
@@ -147,10 +153,86 @@ body{
 .nav-links a{
     color: var(--color-white);
     text-decoration: none;
-    transition: all 0.3s ease;
+    /* transition: all 1s ease; */
 }
 
 a:hover {
     color: var(--color-white);
     text-decoration: underline;
+}
+
+/* header part ends here */
+
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: var(--space-lg) var(--space-lg) ;
+    min-height: calc(100vh - 80px);
+}
+
+.titleText{
+    font-size: 4rem;
+    font-family: "Roboto";
+    line-height: 1.2;
+}
+.t2{
+    color: #4f46e5;
+}
+.description{
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+.cta-btn{
+    display: flex;
+    gap: 10px;
+    padding: var(--space-lg);
+}
+
+.start-btn{
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    border: none;
+    background-color: #4f46e5;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.story-btn{
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    border: 2px solid #4f46e5;
+    color: #1209c7;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.start-btn:hover{
+    border: 2px solid #4f46e5;
+    background-color: #ffffff;
+    font-weight: 600;
+    color: #4f46e5;
+
+}
+.story-btn:hover{
+    border: none;
+    background-color: #4f46e5;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+@media (max-width: 768px){
+    .titleText{
+        font-size: 3rem;
+    }
+    .cta-btn {
+        flex-direction: column;
+    }
 }
