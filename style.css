@@ -9,7 +9,7 @@
 :root {
 
   --color-primary: #4f46e5;
-  --color-secondary: #111827;
+  --color-secondary: #21163d;
   --color-text: #374151;
   --color-white: #ffffff;
 
@@ -30,8 +30,14 @@
 
 @font-face {
     font-family: "Roboto";
-    font-weight: 400;
+    font-weight: 700;
     src: url('/fonts/Roboto_Condensed-ExtraBold.ttf');
+}
+@font-face {
+    font-family: "Roboto-Regular";
+    font-weight: 400;
+    line-height: 1.5rem;
+    src: url('/fonts/Roboto_Condensed-Regular.ttf');
 }
 
 body{
@@ -41,7 +47,7 @@ body{
 
 .header{
     height: 80px;
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     color: var(--color-white);
     display: flex;
     justify-content: space-between;
@@ -234,5 +240,102 @@ a:hover {
     }
     .cta-btn {
         flex-direction: column;
+    }
+}
+
+/* main hero section done here  */
+
+
+.feature{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: calc(100vh);
+    padding:  var(--space-lg);
+    background-color: var(--color-secondary);
+    box-shadow: 0 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+div.card{
+    border-radius: 10px;
+    min-height: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 var(--space-md);
+    text-align: center;
+    font-family: 'Roboto';
+    background-color: var(--color-white);
+    box-shadow: 0 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: scrolling linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+
+}
+
+
+@keyframes scrolling{
+    from{
+        opacity: 0;
+        scale: 0.5;
+        /* transform: translateX(-150px); */
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+        transform: translateX(0px);
+    }
+}
+
+.card h3{
+    color: #4f46e5;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+.card p{
+    font-family: 'Roboto-Regular';
+    /* font-size: 1rem; */
+}
+
+.details-btn{
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: 700;
+    padding: var(--space-sm);
+    background-color: #4f46e5;
+    min-height: 44px;
+    min-width: 88px;
+
+}
+
+
+@media (max-width:768px) {
+        .card h3{
+            font-size: 1.5rem;
+        }
+        .card p{
+            font-size: 1rem;
+        }
+        .feature{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+        }
+    
+}
+@media (min-width : 1200px){
+    .feature{
+        grid-template-columns: repeat(3,1fr) ;
+        padding: var(--space-md);
+    }
+    .card h3{
+        font-size: 2.5rem;
+    }
+    .card p{
+        font-size: 1.2rem;
     }
 }
